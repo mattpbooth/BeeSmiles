@@ -17,14 +17,15 @@ public class WingFlap : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
+        // Should probably slerp this
         _angle += _speed * _direction * Time.deltaTime;
         if (_angle >= _maxRotation || _angle <= _minRotation)
         {
             _direction = -_direction;
         }
         _angle = Mathf.Clamp(_angle, _minRotation, _maxRotation);
-        Debug.Log(_angle);
         _transform.Rotate(Vector3.forward, _angle);
 	}
 }
