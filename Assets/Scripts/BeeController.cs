@@ -8,7 +8,15 @@ public class BeeController : MonoBehaviour
 
     private Transform _transform;
     private bool _scaleInverted = false;
-  
+    private int _nectarCollected = 0;
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Flower flower = other.GetComponent("Flower") as Flower;
+        _nectarCollected += flower.Nectar;
+        Object.Destroy(other.gameObject);
+    }
+
 	// Use this for initialization
 	void Start () 
     {

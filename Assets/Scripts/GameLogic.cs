@@ -13,4 +13,9 @@ public class GameLogic : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void GameOver()
+    {
+        Debug.Log("Game Over");
+    }
 }
