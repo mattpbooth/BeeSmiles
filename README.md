@@ -1,3 +1,5 @@
+(in progress, probably quite broken)
+
 BeeSmiles
 =========
 
